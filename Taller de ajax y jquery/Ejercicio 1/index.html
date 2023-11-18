@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo de JQuery, HTML, AJAX y Bootstrap 5</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+</head>
+<body> 
+
+    <!--Este código lo que hace es mostrar los datos almacenados en el archivo datos.JSON. Así 
+        que al darle en el botón "Cargar datos", despliega los nombres con los correos guardados.-->
+
+    <div class="container mt-5">
+        <h1>Ejemplo de Jquery, HTML, AJAX y Bootstrap 5</h1>
+        <div id="result"></div>
+        <button id="load-data" class="btn btn-primary mt-3">Cargar datos</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#load-data').click(function() {
+                $.ajax({
+                    url: 'datos.json', //Ruta al archivo JSON que contiene los datos
+
+                    dataType: 'json',
+                    success: function(data) {
+                        var resultHTML = '';
+                        $.each(data, function(index, item) {
+                            resultHTML += '<p>' + item.name + ' - ' + item.email + '</p>';
+                        });
+                        $('#result').html(resultHTML);
+                    },
+                    error: function() {
+                        alert('Ha ocurrido un error al cargar los datos.');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

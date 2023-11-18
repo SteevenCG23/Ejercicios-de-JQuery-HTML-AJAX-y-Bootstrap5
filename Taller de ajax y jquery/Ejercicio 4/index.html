@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Reloj personalizado con JavaScript</title>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <!--Este código lo que hace es permitirnos visualizar el día y hora en tiempo real.-->
+
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</nav>
+<div class="container">
+    <h1>Reloj personalizado con JavaScript</h1>
+     <div class="row">
+        <div id="content" class="col-lg-12">
+            <div class="date">
+                <span id="weekDay" class="weekDay"></span>,
+                <span id="day" class="day"></span> de
+                <span id="month" class="month"></span> del
+                <span id="year" class="year"></span>
+            </div>
+            <div class="clock">
+                <span id="hours" class="hours"></span> :
+                <span id="minutes" class="minutes"></span> :
+                <span id="seconds" class="seconds"></span>
+            </div>
+        </div>
+     </div>
+
+     <div class="row">
+        <div class="col-lg-12">
+
+            <!--Bloqye de anuncios adaptable-->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-6676636635558550"
+                data-ad-slot="8523024962"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+     </div>
+</div>
+<script src="clock.js"></script>
+</body>
+</html>
